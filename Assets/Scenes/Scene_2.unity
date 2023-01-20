@@ -2294,6 +2294,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: -4
       objectReference: {fileID: 0}
+    - target: {fileID: -1773989205489933093, guid: c85426555c8051e46955ca4611b9b4ed, type: 3}
+      propertyPath: m_SortingOrder
+      value: -1
+      objectReference: {fileID: 0}
     - target: {fileID: -485990856666115531, guid: c85426555c8051e46955ca4611b9b4ed, type: 3}
       propertyPath: m_LocalRotation.w
       value: 0.6883255
