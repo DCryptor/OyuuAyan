@@ -12,11 +12,10 @@ public class CharacterManager : MonoBehaviour
     [HideInInspector] public Animator anim;
     [HideInInspector] public PlayableDirector cutscene_player;
     public TimelineAsset[] cutscene;
-    public enum CutScene { scene_0, scene_1, scene_2, scene_3, scene_4, scene_5, scene_6, scene_7, scene_8, scene_9, scene_10 }
+    public enum CutScene { scene_0, scene_1, scene_2, scene_3, scene_4, scene_5, scene_6, scene_7, scene_8, scene_9, scene_10, scene_11, scene_12, scene_13, scene_14, scene_15, startlevel }
     public CutScene ActiveCutScene = CutScene.scene_0;
     public float cutscene_timer;
     public bool isPlayable;
-
     // Start is called before the first frame update
     void Awake()
     {
@@ -150,7 +149,37 @@ public class CharacterManager : MonoBehaviour
             case CutScene.scene_10:
                 if (cutscene_timer == 0.0f)
                 {
+                    //action.GriAnimation();
                     cutscene_player.Play(cutscene[9]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    action.Unhide_Animals();
+                    DefaulCutScene();
+                }
+                break;
+            case CutScene.scene_11:
+                if (cutscene_timer == 0.0f)
+                {
+                    action.Hide_Animals();
+                    cutscene_player.Play(cutscene[10]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    action.MostActivation();
+                    action.RabbitActivation();
+                    action.Move_On();
+                    DefaulCutScene();
+                }
+                break;
+            case CutScene.scene_12:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[11]);
                     cutscene_timer = ((float)cutscene_player.playableAsset.duration);
                     isPlayable = true;
                 }
@@ -158,6 +187,40 @@ public class CharacterManager : MonoBehaviour
                 {
                     DefaulCutScene();
                 }
+                break;
+            case CutScene.scene_13:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[12]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    DefaulCutScene();
+                }
+                break;
+            case CutScene.scene_14:
+                if (cutscene_timer == 0.0f)
+                {
+                    action.GribDestroy();
+                    cutscene_player.Play(cutscene[13]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    action.Move_On();
+                    DefaulCutScene();
+                }
+                break;
+            case CutScene.scene_15:
+                action.Level_3();
+                action.Move_Off();
+                DefaulCutScene();
+                break;
+            case CutScene.startlevel:
+                action.StartLevel();
                 break;
         }
     }
@@ -193,7 +256,7 @@ public class CharacterManager : MonoBehaviour
     }
     public void Click()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && !isPlayable)
         {
             RaycastHit2D hit = Physics2D.Raycast(Camera.main.ScreenToWorldPoint(Input.mousePosition), Vector2.zero);
 
@@ -201,9 +264,25 @@ public class CharacterManager : MonoBehaviour
             {
                 ItemData i = hit.collider.gameObject.GetComponent<ItemData>();
                 audioSource.PlayOneShot(i.item.item_sound);
-                ActiveCutScene = i.scene;
-                Destroy(hit.collider.gameObject);
+                if (i.item.value == 1)
+                {
+                    ActiveCutScene = i.scene;
+                    Destroy(hit.collider.gameObject);
+                }
             }
         }
+    }
+
+    public void isRabbit()
+    {
+        ActiveCutScene = CutScene.scene_11;
+    }
+    public void isMedved()
+    {
+        ActiveCutScene = CutScene.scene_12;
+    }
+    public void isBelka()
+    {
+        ActiveCutScene = CutScene.scene_13;
     }
 }

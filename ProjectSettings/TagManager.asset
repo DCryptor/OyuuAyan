@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 2
   tags:
   - Grib
+  - PanelAnimals
+  - Axe
+  - Lopata
+  - Knife
+  - Korzina
+  - Lozhka
+  - Rabbit
+  - Most
   layers:
   - Default
   - TransparentFX

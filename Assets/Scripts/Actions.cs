@@ -5,6 +5,8 @@ using UnityEngine;
 public class Actions : MonoBehaviour
 {
     public GameObject[] button;
+    public GameObject panel_animals;
+
     public bool isMove;
     public void Hide_Buttons()
     {
@@ -24,7 +26,7 @@ public class Actions : MonoBehaviour
 
     public void StartLevel()
     {
-        SceneManager.LoadScene("Scene_1");
+        SceneManager.LoadScene("Scene_Backpack");
     }
 
     public void Move_On()
@@ -46,9 +48,32 @@ public class Actions : MonoBehaviour
     {
         SceneManager.LoadScene("Scene_2");
     }
-
-    public void ButtonCreate()
+    public void Level_3()
     {
+        SceneManager.LoadScene("Scene_3");
+    }
+    public void Unhide_Animals()
+    {
+        panel_animals.SetActive(true);
+    }
+    public void Hide_Animals()
+    {
+        panel_animals.SetActive(false);
+    }
 
+    public void GribDestroy()
+    {
+        GameObject Grib = GameObject.FindGameObjectWithTag("Grib");
+        Destroy(Grib);
+    }
+    public void RabbitActivation()
+    {
+        GameObject rabbit = GameObject.FindGameObjectWithTag("Rabbit");
+        rabbit.GetComponent<Rabbyt>().RabbytAnimation();
+    }
+    public void MostActivation()
+    {
+        GameObject most = GameObject.FindGameObjectWithTag("Most");
+        most.GetComponent<Most>().MostAnimation();
     }
 }
