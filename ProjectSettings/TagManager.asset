@@ -13,6 +13,8 @@ TagManager:
   - Lozhka
   - Rabbit
   - Most
+  - Big_Rock
+  - Small_Rock
   layers:
   - Default
   - TransparentFX

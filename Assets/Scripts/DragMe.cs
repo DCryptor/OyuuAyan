@@ -9,7 +9,6 @@ public class DragMe : MonoBehaviour
     private Vector3 startPosition;
     public GameObject item;
     public Camera cam;
-
     void Awake()
     {
         startPosition = start.position;

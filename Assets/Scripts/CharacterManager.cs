@@ -12,7 +12,7 @@ public class CharacterManager : MonoBehaviour
     [HideInInspector] public Animator anim;
     [HideInInspector] public PlayableDirector cutscene_player;
     public TimelineAsset[] cutscene;
-    public enum CutScene { scene_0, scene_1, scene_2, scene_3, scene_4, scene_5, scene_6, scene_7, scene_8, scene_9, scene_10, scene_11, scene_12, scene_13, scene_14, scene_15, startlevel }
+    public enum CutScene { scene_0, scene_1, scene_2, scene_3, scene_4, scene_5, scene_6, scene_7, scene_8, scene_9, scene_10, scene_11, scene_12, scene_13, scene_14, scene_15, startlevel, scene_16 ,scene_17,small_rock,tot_rock,bober_maxtal,uraa_grib_bober_level}
     public CutScene ActiveCutScene = CutScene.scene_0;
     public float cutscene_timer;
     public bool isPlayable;
@@ -222,6 +222,79 @@ public class CharacterManager : MonoBehaviour
             case CutScene.startlevel:
                 action.StartLevel();
                 break;
+            case CutScene.scene_16:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[14]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    //DefaulCutScene();
+                    Active_17();
+                }
+            break;
+            case CutScene.scene_17:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[15]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    //DefaulCutScene();
+                }
+            break;
+            case CutScene.small_rock:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[16]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    //DefaulCutScene();
+                }
+            break;
+            case CutScene.tot_rock:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[17]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+
+                }
+            break;
+                case CutScene.bober_maxtal:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[18]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+
+                }
+            break;
+                case CutScene.uraa_grib_bober_level:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[19]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+
+                }
+            break;
         }
     }
 
@@ -284,5 +357,17 @@ public class CharacterManager : MonoBehaviour
     public void isBelka()
     {
         ActiveCutScene = CutScene.scene_13;
+    }
+    public void Active_17()
+    {
+        ActiveCutScene = CutScene.scene_17;
+    }
+    public void Zero_State()
+    {
+        ActiveCutScene = CutScene.scene_0;
+    }
+    public void Bober_Maxtal()
+    {
+        ActiveCutScene = CutScene.bober_maxtal;
     }
 }

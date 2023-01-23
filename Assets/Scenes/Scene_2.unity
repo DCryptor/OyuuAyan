@@ -1792,7 +1792,7 @@ PrefabInstance:
     - target: {fileID: 4236009480156078386, guid: a400a025edc00784f8081d87c015530c, type: 3}
       propertyPath: m_PlayableAsset
       value: 
-      objectReference: {fileID: 11400000, guid: f0badd810ed0d1e4693c6f3b2736d972, type: 2}
+      objectReference: {fileID: 11400000, guid: ad6e79fe10b3bd9439c6a0449acc3c82, type: 2}
     - target: {fileID: 4236009480156078386, guid: a400a025edc00784f8081d87c015530c, type: 3}
       propertyPath: m_SceneBindings.Array.size
       value: 27
@@ -1846,6 +1846,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 5588723521288642661, guid: f0badd810ed0d1e4693c6f3b2736d972, type: 2}
     - target: {fileID: 4236009480156078386, guid: a400a025edc00784f8081d87c015530c, type: 3}
+      propertyPath: m_SceneBindings.Array.data[27].key
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4236009480156078386, guid: a400a025edc00784f8081d87c015530c, type: 3}
       propertyPath: m_SceneBindings.Array.data[15].value
       value: 
       objectReference: {fileID: 1269097450}
@@ -1891,6 +1895,10 @@ PrefabInstance:
       objectReference: {fileID: 1269097450}
     - target: {fileID: 4236009480156078386, guid: a400a025edc00784f8081d87c015530c, type: 3}
       propertyPath: m_SceneBindings.Array.data[26].value
+      value: 
+      objectReference: {fileID: 1269097451}
+    - target: {fileID: 4236009480156078386, guid: a400a025edc00784f8081d87c015530c, type: 3}
+      propertyPath: m_SceneBindings.Array.data[27].value
       value: 
       objectReference: {fileID: 1269097451}
     - target: {fileID: 4236009480156078396, guid: a400a025edc00784f8081d87c015530c, type: 3}
@@ -3762,6 +3770,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: -6464359129980556759, guid: 0d0a69bf6926b074d9ea08b1dc1ad235, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -5797691537043116636, guid: 0d0a69bf6926b074d9ea08b1dc1ad235, type: 3}
       propertyPath: m_SortingOrder
       value: 11
@@ -3793,6 +3805,10 @@ PrefabInstance:
     - target: {fileID: -1537998112213994131, guid: 0d0a69bf6926b074d9ea08b1dc1ad235, type: 3}
       propertyPath: m_SortingOrder
       value: -78
+      objectReference: {fileID: 0}
+    - target: {fileID: -1017726949479560255, guid: 0d0a69bf6926b074d9ea08b1dc1ad235, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -870963786180608738, guid: 0d0a69bf6926b074d9ea08b1dc1ad235, type: 3}
       propertyPath: m_IsActive

@@ -76,4 +76,5 @@ public class Actions : MonoBehaviour
         GameObject most = GameObject.FindGameObjectWithTag("Most");
         most.GetComponent<Most>().MostAnimation();
     }
+
 }
