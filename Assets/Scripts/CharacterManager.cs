@@ -12,7 +12,7 @@ public class CharacterManager : MonoBehaviour
     [HideInInspector] public Animator anim;
     [HideInInspector] public PlayableDirector cutscene_player;
     public TimelineAsset[] cutscene;
-    public enum CutScene { scene_0, scene_1, scene_2, scene_3, scene_4, scene_5, scene_6, scene_7, scene_8, scene_9, scene_10, scene_11, scene_12, scene_13, scene_14, scene_15, startlevel, scene_16 ,scene_17,small_rock,tot_rock,bober_maxtal,uraa_grib_bober_level}
+    public enum CutScene { scene_0, scene_1, scene_2, scene_3, scene_4, scene_5, scene_6, scene_7, scene_8, scene_9, scene_10, scene_11, scene_12, scene_13, scene_14, scene_15, startlevel, scene_16, scene_17, small_rock, tot_rock, bober_maxtal, uraa_grib_bober_level, scene_18, za_bes, net_bes, za_elkoy, net_elka, za_bereza, net_bereza, eshe_odin_grib, final_level, final_1, final_2, final_3 }
     public CutScene ActiveCutScene = CutScene.scene_0;
     public float cutscene_timer;
     public bool isPlayable;
@@ -234,7 +234,7 @@ public class CharacterManager : MonoBehaviour
                     //DefaulCutScene();
                     Active_17();
                 }
-            break;
+                break;
             case CutScene.scene_17:
                 if (cutscene_timer == 0.0f)
                 {
@@ -246,7 +246,7 @@ public class CharacterManager : MonoBehaviour
                 {
                     //DefaulCutScene();
                 }
-            break;
+                break;
             case CutScene.small_rock:
                 if (cutscene_timer == 0.0f)
                 {
@@ -258,7 +258,7 @@ public class CharacterManager : MonoBehaviour
                 {
                     //DefaulCutScene();
                 }
-            break;
+                break;
             case CutScene.tot_rock:
                 if (cutscene_timer == 0.0f)
                 {
@@ -270,8 +270,8 @@ public class CharacterManager : MonoBehaviour
                 {
 
                 }
-            break;
-                case CutScene.bober_maxtal:
+                break;
+            case CutScene.bober_maxtal:
                 if (cutscene_timer == 0.0f)
                 {
                     cutscene_player.Play(cutscene[18]);
@@ -282,8 +282,8 @@ public class CharacterManager : MonoBehaviour
                 {
 
                 }
-            break;
-                case CutScene.uraa_grib_bober_level:
+                break;
+            case CutScene.uraa_grib_bober_level:
                 if (cutscene_timer == 0.0f)
                 {
                     cutscene_player.Play(cutscene[19]);
@@ -292,9 +292,146 @@ public class CharacterManager : MonoBehaviour
                 }
                 else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
                 {
-
+                    action.Move_On();
+                    DefaulCutScene();
                 }
-            break;
+                break;
+            case CutScene.scene_18:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[20]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    DefaulCutScene();
+                }
+                break;
+            case CutScene.za_bes:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[21]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    DefaulCutScene();
+                }
+                break;
+            case CutScene.net_bes:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[22]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    DefaulCutScene();
+                }
+                break;
+            case CutScene.za_elkoy:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[23]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    DefaulCutScene();
+                }
+                break;
+            case CutScene.net_elka:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[24]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    DefaulCutScene();
+                }
+                break;
+            case CutScene.za_bereza:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[25]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    DefaulCutScene();
+                }
+                break;
+            case CutScene.net_bereza:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[26]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    DefaulCutScene();
+                }
+                break;
+            case CutScene.eshe_odin_grib:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[27]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    action.Move_On();
+                    DefaulCutScene();
+                }
+                break;
+            case CutScene.final_level:
+                action.Final_Level();
+                break;
+            case CutScene.final_1:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[28]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    //  Final_2();
+                }
+                break;
+            case CutScene.final_2:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[29]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    Final_3();
+                }
+                break;
+            case CutScene.final_3:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[30]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    DefaulCutScene();
+                }
+                break;
         }
     }
 
@@ -342,10 +479,23 @@ public class CharacterManager : MonoBehaviour
                     ActiveCutScene = i.scene;
                     Destroy(hit.collider.gameObject);
                 }
+                if (i.item.value == 5)
+                {
+                    ActiveCutScene = CutScene.eshe_odin_grib;
+                    Destroy(hit.collider.gameObject);
+                }
             }
         }
     }
 
+    public void Final_2()
+    {
+        ActiveCutScene = CutScene.final_2;
+    }
+    public void Final_3()
+    {
+        ActiveCutScene = CutScene.final_3;
+    }
     public void isRabbit()
     {
         ActiveCutScene = CutScene.scene_11;

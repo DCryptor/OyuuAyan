@@ -76,5 +76,9 @@ public class Actions : MonoBehaviour
         GameObject most = GameObject.FindGameObjectWithTag("Most");
         most.GetComponent<Most>().MostAnimation();
     }
+    public void Final_Level()
+    {
+        SceneManager.LoadScene("Scene_5");
+    }
 
 }
