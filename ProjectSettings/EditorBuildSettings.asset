@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Intro.unity
+    guid: 13b7aa6eceea41a4fa46503d506c1be5
+  - enabled: 1
+    path: Assets/Scenes/Menu.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/Scenes/Menu_2.unity
+    guid: 2bb0fd76cca9f8d4ca98148408fbb3b6
+  - enabled: 1
     path: Assets/Scenes/Scene_0.unity
     guid: 2bf18aea4f0908e4d8580abc4dde222b
   - enabled: 1
@@ -21,10 +30,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene_Backpack.unity
     guid: 85ae1492a33ac7049bf0f07e44643949
   - enabled: 1
-    path: Assets/Scenes/Menu.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
     path: Assets/Scenes/Scene_5.unity
     guid: 828bcf6d5943d484d844d79972cb9486
+  - enabled: 1
+    path: Assets/Scenes/Final.unity
+    guid: 5579f2fdd27112e459bca3a818dad227
+  - enabled: 1
+    path: Assets/Scenes/Scene_4.unity
+    guid: ffc50581ac3df7e488043fb10540877c
   m_configObjects:
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 97cb24e93d5474541a81bc54bfaa67b1, type: 2}

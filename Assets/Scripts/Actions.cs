@@ -52,6 +52,10 @@ public class Actions : MonoBehaviour
     {
         SceneManager.LoadScene("Scene_3");
     }
+    public void Level_4()
+    {
+        SceneManager.LoadScene("Scene_4");
+    }
     public void Unhide_Animals()
     {
         panel_animals.SetActive(true);
@@ -79,6 +83,11 @@ public class Actions : MonoBehaviour
     public void Final_Level()
     {
         SceneManager.LoadScene("Scene_5");
+    }
+
+    public void TheEnd()
+    {
+        SceneManager.LoadScene("Final");
     }
 
 }

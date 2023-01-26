@@ -12,7 +12,7 @@ public class CharacterManager : MonoBehaviour
     [HideInInspector] public Animator anim;
     [HideInInspector] public PlayableDirector cutscene_player;
     public TimelineAsset[] cutscene;
-    public enum CutScene { scene_0, scene_1, scene_2, scene_3, scene_4, scene_5, scene_6, scene_7, scene_8, scene_9, scene_10, scene_11, scene_12, scene_13, scene_14, scene_15, startlevel, scene_16, scene_17, small_rock, tot_rock, bober_maxtal, uraa_grib_bober_level, scene_18, za_bes, net_bes, za_elkoy, net_elka, za_bereza, net_bereza, eshe_odin_grib, final_level, final_1, final_2, final_3 }
+    public enum CutScene { scene_0, scene_1, scene_2, scene_3, scene_4, scene_5, scene_6, scene_7, scene_8, scene_9, scene_10, scene_11, scene_12, scene_13, scene_14, scene_15, startlevel, scene_16, scene_17, small_rock, tot_rock, bober_maxtal, uraa_grib_bober_level, scene_18, za_bes, net_bes, za_elkoy, net_elka, za_bereza, net_bereza, eshe_odin_grib, final_level, final_1, final_2, final_3, final_4, the_end, skolko_gribov, level_4 }
     public CutScene ActiveCutScene = CutScene.scene_0;
     public float cutscene_timer;
     public bool isPlayable;
@@ -431,6 +431,36 @@ public class CharacterManager : MonoBehaviour
                 {
                     DefaulCutScene();
                 }
+                break;
+            case CutScene.final_4:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[31]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    DefaulCutScene();
+                }
+                break;
+            case CutScene.the_end:
+                action.TheEnd();
+                break;
+            case CutScene.skolko_gribov:
+                if (cutscene_timer == 0.0f)
+                {
+                    cutscene_player.Play(cutscene[29]);
+                    cutscene_timer = ((float)cutscene_player.playableAsset.duration);
+                    isPlayable = true;
+                }
+                else if (cutscene_timer <= 0.5f && cutscene_timer >= 0.4f)
+                {
+                    DefaulCutScene();
+                }
+                break;
+            case CutScene.level_4:
+                action.Level_4();
                 break;
         }
     }

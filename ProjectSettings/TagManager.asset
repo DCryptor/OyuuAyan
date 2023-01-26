@@ -15,6 +15,7 @@ TagManager:
   - Most
   - Big_Rock
   - Small_Rock
+  - Fox
   layers:
   - Default
   - TransparentFX

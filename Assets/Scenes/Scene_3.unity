@@ -2526,6 +2526,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6984411988668969113, guid: ce1ecc9e4440beb448407094535ab7d8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f3bfd611b2fe5dc4fa861393370c453f, type: 3}
+    - target: {fileID: 6984411988668969113, guid: ce1ecc9e4440beb448407094535ab7d8, type: 3}
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
@@ -2540,6 +2544,18 @@ PrefabInstance:
     - target: {fileID: 6984411988668969126, guid: ce1ecc9e4440beb448407094535ab7d8, type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984411988668969126, guid: ce1ecc9e4440beb448407094535ab7d8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.8778398
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984411988668969126, guid: ce1ecc9e4440beb448407094535ab7d8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.8778398
+      objectReference: {fileID: 0}
+    - target: {fileID: 6984411988668969126, guid: ce1ecc9e4440beb448407094535ab7d8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.8778398
       objectReference: {fileID: 0}
     - target: {fileID: 6984411988668969126, guid: ce1ecc9e4440beb448407094535ab7d8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2641,7 +2657,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a402d01c37809341b97e68b24d61f36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 15
+  scene: 38
 --- !u!4 &1285284759
 Transform:
   m_ObjectHideFlags: 0
@@ -3197,7 +3213,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -2558335720614275656, guid: ed9a6a73895d3a147a7975908a8e77a6, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -449799268060246149, guid: ed9a6a73895d3a147a7975908a8e77a6, type: 3}
       propertyPath: m_SortingOrder
@@ -3213,7 +3229,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7829651430331720838, guid: ed9a6a73895d3a147a7975908a8e77a6, type: 3}
       propertyPath: m_SortingOrder
-      value: -1
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 8031748481633112049, guid: ed9a6a73895d3a147a7975908a8e77a6, type: 3}
       propertyPath: m_IsActive
